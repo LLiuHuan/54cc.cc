@@ -1,0 +1,139 @@
+{
+  "name": "web",
+  "private": true,
+  "version": "0.0.1-beta",
+  "author": {
+    "name": "LLiuHuan",
+    "email": "184555556@qq.com",
+    "url": "https://github.com/LLiuHuan/54cc.cc"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "build:esno": "vite build && esno ./build/script/postBuild.ts",
+    "serve": "vite preview",
+    "changelog": "conventional-changelog -p custom-config -i CHANGELOG.md -s -r 0 -n ./changelog-option.js",
+    "deploy": "cross-env NODE_ENV=development vue-tsc --noEmit && vite build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "@rollup/plugin-alias": "^3.1.9",
+    "@types/node": "^17.0.25",
+    "axios": "^0.26.1",
+    "date-fns": "^2.28.0",
+    "pinia": "^2.0.13",
+    "vue": "^3.2.25",
+    "vue-router": "^4.0.13"
+  },
+  "devDependencies": {
+    "@arco-design/web-vue": "^2.24.1",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.4",
+    "compare-func": "^2.0.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-vue": "^8.6.0",
+    "gh-pages": "^3.2.3",
+    "less": "^4.1.2",
+    "nprogress": "^0.2.0",
+    "prettier": "^2.6.2",
+    "scss": "^0.2.4",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.5.4",
+    "unplugin-vue-components": "^0.19.3",
+    "vite": "^2.9.5",
+    "vite-plugin-eslint": "^1.5.2",
+    "vite-plugin-optimize-persist": "^0.1.2",
+    "vite-plugin-package-config": "^0.1.1",
+    "vite-plugin-style-import": "^2.0.0",
+    "vite-plugin-windicss": "^1.8.4",
+    "vue-eslint-parser": "^8.3.0",
+    "vue-tsc": "^0.34.7",
+    "windicss": "^3.5.1"
+  },
+  "changelog": {
+    "authorName": true,
+    "authorEmail": true,
+    "language": "zh",
+    "settings": {
+      "feat": {
+        "title": "✨ 新功能",
+        "enable": true
+      },
+      "fix": {
+        "title": "🐛 Bug 修复",
+        "enable": true
+      },
+      "perf": {
+        "title": "⚡ 性能优化",
+        "enable": true
+      },
+      "revert": {
+        "title": "⏪ 回退",
+        "enable": true
+      },
+      "refactor": {
+        "title": "♻ 代码重构",
+        "enable": true
+      },
+      "docs": {
+        "title": "📝 文档",
+        "enable": true
+      },
+      "style": {
+        "title": "💄 风格",
+        "enable": true
+      },
+      "test": {
+        "title": "✅ 测试",
+        "enable": true
+      },
+      "build": {
+        "title": "👷‍ 构建",
+        "enable": true
+      },
+      "ci": {
+        "title": "🔧 CI 配置",
+        "enable": true
+      },
+      "chore": {
+        "title": "🎫 其他更新",
+        "enable": true
+      }
+    }
+  },
+  "lint-staged": {
+    "*.{vue,js,ts,tsx}": "eslint --fix"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-customizable"
+    }
+  },
+  "keywords": [
+    "vue",
+    "typescript",
+    "vue3",
+    "ts",
+    "tsx",
+    "admin"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LLiuHuan/54cc.cc/issues",
+    "email": "184555556@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LLiuHuan/54cc.cc.git"
+  },
+  "homepage": "https://github.com/LLiuHuan/54cc.cc",
+  "engines": {
+    "node": "^12 || >=14"
+  }
+}
